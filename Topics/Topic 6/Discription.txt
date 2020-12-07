@@ -1,0 +1,27 @@
+This lecture marks the transition from the continuous-time to the discrete-time domain, i.e., for the remaining part of the course we will address only theories and methods which apply to sampled signals. Basically, we will discuss two different matters -- modification and analysis of such signals.
+
+After a general introduction to digital signal processing, we will initiate our discussion on signal modification, normally also referred to as digital filtering. I will show you how it is possible to transform a transfer function H(s) for a continuous-time filter into H(z), which is the transfer function for the corresponding discrete-time (or digital) filter.
+
+In this lecture, and onward I will rely on many of the mathematical methods that you have already studied in BIE-1 and BIE-2 on the 3rd and the 4th semester. As I have announced earlier, should you need a brush-up on the most essential of these topics, you may want to browse the material that I have recently presented to your fellow students on COMTEK-5, see the Moodle page for the course "Signalbehandling for Computer-Ingeniører", Autumn 2020.
+
+Finally, I'd like to emphasize that the text book used in this part of the course, Discrete-Time Signal Processing by Oppenheim and Schafer, is THE single most important book when it comes to theories and methods on fundamental digital signal processing. Therefore, it goes without saying that I highly recommend all of you to buy the book -- it belongs on the book shelf of any Electrical Engineer, student or professional.
+
+
+Reading material:
+
+Oppenheim & Schafer; (for a brief re-cap you may want to read pp. 11-50), pp. 183-185 and pp. 517-528 (to section 2.2).
+
+
+Exercise:
+
+In today's exercise we will apply the same 1st order analog LP-filter as we discussed in the lecture. We will apply the following values for the resistor and the capacitor; 1 kilo Ohm and 1 micro Farad, respectively. We want to design an equivalent digital filter, using the impulse invariant method. The sample frequency is 8 kHz.
+
+1) Write a mathematical expression for the discrete-time impulse response and do a "paper & pencil" calculation of the first 5 values.
+
+2) Write a mathematical expression for the filter I/O relation in terms of the convolution sum. Use this expression to calculate the first 50 samples of the step response from the filter. In this exercise, which needs to be solved by writing a small program (Matlab, Python, C, ...), you may want to apply e.g., 100 terms in the convolution sum. Explain why you can do with only 100 terms.
+
+3) Write a mathematical expression for the filter transfer function. Find the poles and the zeros and plot these in the z-plane. Is the filter stable -- and why/why not..??
+
+4) Write a mathematical expression for the filter I/O relation in terms of the difference equation. In the file signal_noise.dat you'll find 1000 samples of a noise contaminated signal that we want to filter using our designed filter (the signal is a damped sinusoid with f=80Hz superimposed with a Gaussian distributed white noise component). The difference equation is implemented in terms of a program which is next used to conduct the filtering.
+
+5) Write mathematical expressions for the filter frequency response and amplitude response, respectively. Next, draft the amplitude response. Finally, calculate where the 3dB frequency is located -- both for the analog and the digital filter. Discuss whether the analog and the digital filters are identical in terms of the 3dB frequency.
